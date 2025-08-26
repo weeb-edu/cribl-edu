@@ -1,0 +1,17 @@
+Event Breakers
+
+Event Breakers in Cribl Stream vs Cribl Search
+ Cribl autoamtically parses event data into both of these products. The product does not provide state 0 data, that is to say, the data as it arrives into the product without any parsing into events.
+ This makes sense from a performance and data manageability standpoint.
+ Stream provides the ability to make change to event breakers which separate data stream into disparate events. This ability is called Event Breaking in Stream, or Datatypes in Search. 
+
+ In Cribl Stream, and also in Search, we automatically apply best guess to the first 250 characters of an event. This can be adjusted under Advanced Settings > Max Timestamp Scan Depth.
+
+
+Cribl uses AutoTimestamp in various forms to populate the following: (both as a function available to Pipelines OR as configured inside an Event Breaker)
+   _time 
+   _time is the result of AutoTimestamp, which is highly configurable. We recommend using UTC/GMT and converting to local time later in the data reporting layer.
+
+   
+
+   
